@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikki-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(3, 3, 71);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(0, 0, 56);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(185, 185, 247);
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #c8bdfc;
+            text-shadow: 0 0 8px #a488ea;
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+
+        main hr {
+            background: #7272ae;
+            border: 0;
+            height: 1.2px;
+            margin: 60px 87px
+        }
+
+        .left {
+            font-size: 1.55rem;
+        }
+
+
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+
+        }
+
+        .firstSection>div {
+            width: 47%;
+
+        }
+
+        .leftSection {
+            font-size: 3rem;
+
+        }
+
+        .rightSection {
+            width: 80%;
+
+        }
+
+        .rightSection img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .rightSection img:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1) saturate(1.2);
+        }
+
+
+        .purple {
+            color: #8c5ac2;
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(151, 151, 235);
+        }
+
+        #element {
+            color: #97a3f0;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(151, 163, 240, 0.8),
+                0 0 20px rgba(151, 163, 240, 0.5);
+        }
+
+
+        .aboutSection {
+            max-width: 80vw;
+            margin: 80px auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .aboutSection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #e4d5f5;
+        }
+
+        .servicesSection {
+            text-align: center;
+            margin: 100px auto;
+            max-width: 90vw;
+        }
+
+        .servicesSection h1 {
+            color: #8c5ac2;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .serviceCards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .projects {
+            display: flex;
+            margin: 10px 0px;
+            padding: 6px auto;
+        }
+
+        .projectCard:hover,
+        .flip-card:hover {
+            box-shadow: 0 8px 20px rgba(140, 90, 194, 0.6);
+            transform: translateY(-7px);
+        }
+
+        .serviceCards .card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+            padding: 2rem 1.2rem;
+            text-align: center;
+            color: black;
+            width: 200px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .serviceCards .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .projectsSection {
+            max-width: 100vw;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .projectsSection h1 {
+            font-size: 2rem;
+            color: #e4d5f5;
+            margin-bottom: 40px;
+        }
+
+        .projectCards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+
+            flex-wrap: wrap;
+        }
+
+        .projectCard {
+            background-color: rgb(0, 0, 56);
+            border-left: 4px solid #8c5ac2;
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 450px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .projectCard h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #b98ffb;
+        }
+
+        .projectCard p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .projectCard:hover {
+            transform: translateY(-5px);
+        }
+
+        .contactSection {
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        .contactSection form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .contactSection input,
+        .contactSection textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .contactSection button {
+            padding: 10px 20px;
+            background-color: #8c5ac2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contactSection button:hover {
+            background-color: #6f42c1;
+        }
+
+        .education-experience ul {
+            text-decoration: none;
+            list-style-type: none;
+
+        }
+
+        .serviceCards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+
+        .flip-card {
+            background-color: transparent;
+            width: 220px;
+            height: 220px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-weight: bold;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card-front {
+            background-color: rgb(186, 174, 255);
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #8c5ac2;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 25px;
+            background-color: #8c5ac2;
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease;
+        }
+
+        .top-btn:hover {
+            background-color: #6f42c1;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .firstSection .leftSection,
+        .firstSection .rightSection {
+            opacity: 0;
+            animation: slideFadeIn 1s ease-out forwards;
+        }
+
+        .firstSection .leftSection {
+            animation-delay: 0.3s;
+        }
+
+        .firstSection .rightSection {
+            animation-delay: 0.6s;
+        }
+
+        .contactSection button:hover {
+            background-color: #6f42c1;
+            box-shadow: 0 0 10px #8c5ac2, 0 0 20px #8c5ac2, 0 0 30px #8c5ac2;
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(0, 0, 56);
+            color: grey;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Nikki's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection" data-aos="fade-right">
+                Hi, My name is <span class="purple">Nikki</span>
+                <div>and I am a passionate</div>
+
+
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+                <div>
+                    <button class="btn">Github</button>
+                </div>
+            </div>
+            <div class="rightSection" data-aos="fade-left">
+                <img src="bg.png" alt="">
+            </div>
+
+        </section>
+
+        <hr>
+        <section id="about" class="aboutSection" <section id="about" class="aboutSection" data-aos="fade-up">
+
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="aboutText">
+                    <p> I'm <strong>Nikki</strong>, a passionate <span class="purple">Web Developer</span>,
+                        <span class="purple">Video Editor</span>, and <span class="purple">Visual Storyteller</span>.
+                        I love building beautiful websites using React.js, HTML, CSS, and JavaScript.
+                        My mission is to blend technology and creativity to make experiences that feel alive.
+                    </p>
+
+                </div>
+                <div class="education-experience">
+                    <h2 style="color:#b98ffb; margin-top:30px;">Education</h2>
+                    <p>B.Tech in Computer Science and Engineering<br>Kr Mangalam University, 2024 – Present</p>
+
+                    <h2 style="color:#b98ffb; margin-top:30px;">Experience</h2>
+                    <ul>
+                        <li>Freelance Web Developer – Designed websites for local brands</li>
+                        <li>Video Editor – Created reels and cinematic content for Instagram creators</li>
+                        <li>Intern – Assisted in UI/UX at ABC Tech (optional if applicable)</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+        </section>
+        <section id="services" class="servicesSection">
+            <h1>My Services</h1>
+            <div class="serviceCards">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Web Development
+                        </div>
+                        <div class="flip-card-back">
+                            I build responsive websites using HTML, CSS, JavaScript & React.js.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Video Editing
+                        </div>
+                        <div class="flip-card-back">
+                            I craft cinematic reels using CapCut, Premiere Pro & storytelling.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Visual Storytelling
+                        </div>
+                        <div class="flip-card-back">
+                            I blend visuals and narrative to create emotionally engaging stories.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="projects" class="secondSection">
+            <h1>Work Experience</h1>
+            <div class="projects" data-aos="flip-left">
+                <div class="projectCard" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Coffee Shop Website ☕</h2>
+                    <p>Designed a modern, responsive coffee shop website using HTML, CSS, and JavaScript. Focused on a
+                        warm UI with smooth navigation and animations.</p>
+                </div>
+                <div class="projectCard" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Video Edits for Clients</h3>
+                    <p>Edited storytelling reels and cinematic content using CapCut and Premiere Pro.</p>
+                </div>
+                <div class="projectCard" data-aos="fade-up" data-aos-delay="300">
+                    <h2>Personal Portfolio 💼</h2>
+                    <p>Built my own portfolio to showcase my skills in web development, video editing, and visual
+                        storytelling. Developed with HTML, CSS, JS, and React.js elements.</p>
+                </div>
+                <div class="projectCard" data-aos="fade-up" data-aos-delay="400">
+                    <h3>React Projects</h3>
+                    <p>Built dynamic interfaces using React.js, including UI animations and routing.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contactSection" data-aos="zoom-in-up">
+            <h1>Contact Me </h1>
+            <p>You can reach out to me for collaboration or freelence work!!</p>
+            <form action="mailto:youremail@example.com" method="post" enctype="text/plain" ... data-aos="fade-up">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <footer>
+            <p>© 2025 Nikki Chauhan | Built with ❤️ by me</p>
+        </footer>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+                'Web Developer 💻',
+                'Graphic Designer 🎨',
+                'Video Editor ✂️',
+                'Web Designer 🌐',
+                'Digital Marketer 📈',
+                'Visual Storyteller 🎥'
+            ],
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 1200,
+            startDelay: 400,
+            showCursor: true,
+            cursorChar: '|',
+            loop: true
+        });
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <a href="#home" class="top-btn" title="Back to Top">↑</a>
+    <script>
+        // Show/hide back to top button
+        const topBtn = document.querySelector('.top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                topBtn.style.display = 'block';
+            } else {
+                topBtn.style.display = 'none';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
