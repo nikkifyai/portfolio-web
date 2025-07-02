@@ -54,7 +54,7 @@ portfolio-website/
 
 📷 Instagram Reels (Cinematic Edits) (Add your reel page if public)
 
-📬 Email: youremail@example.com (replace with your real one)
+📬 Email:cnikki262@gmail.com (replace with your real one)
 
 🙏 Acknowledgments
 Thanks to Typed.js and AOS.js libraries for making the UI more interactive.
